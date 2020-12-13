@@ -1,3 +1,4 @@
+let T = require('node-twitterbot').TwitterBot;
 const config = require('./config')
 const twit = require('twit')
 const T = new twit(config)
