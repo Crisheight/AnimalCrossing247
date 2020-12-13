@@ -1,8 +1,8 @@
 module.exports = {
 
-consumer_key:'S9MiYbkD9gTs04vzYmpX4JZIp',
-consumer_secret:'7PdAlf2Eo9RIIRhehWtLNNXhkbaG9smSI6BGlIqpeVaX6aNALl',
-access_token:'1337720712296095745-6BjIKRGRwP1t1gG6hfZ4mQQCR6I4l5',
-access_token_secret:'cM6lFEJ2RUMKRQ4627Qe3HwyMIoJUEv34Wk9HrxWxw9Xc'
+consumer_key: process.env.BOT_CONSUMER_KEY,
+consumer_secret: process.env.BOT_CONSUMER_SECRET,
+access_token: process.env.BOT_ACCESS_TOKEN,
+access_token_secret: process.env.BOT_ACCESS_TOKEN_SECRET,
 
 }
