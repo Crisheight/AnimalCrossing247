@@ -1,5 +1,5 @@
 .env
 log
 tmp
-ACBotKeys
-tBotKeys
+ACBotKeys.txt
+tBotKeys.txt
