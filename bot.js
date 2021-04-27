@@ -100,53 +100,53 @@ function makeInterval(){
     }
 
 function acSongs() {
-    if (hours == 0)
+    if (hour == 0)
         return ranDom(twelveAM);
-    if (hours == 1)
+    if (hour == 1)
         return ranDom(oneAM);
-    if (hours == 2)
+    if (hour == 2)
         return ranDom(twoAM);
-    if (hours == 3)
+    if (hour == 3)
         return ranDom(threeAM);
-    if (hours == 4)
+    if (hour == 4)
         return ranDom(fourAM);
-    if (hours == 5)
+    if (hour == 5)
         return ranDom(fiveAM);
-    if (hours == 6)
+    if (hour == 6)
         return ranDom(sixAM);
-    if (hours == 7)
+    if (hour == 7)
         return ranDom(sevenAM);
-    if (hours == 8)
+    if (hour == 8)
         return ranDom(eightAM);
-    if (hours == 9)
+    if (hour == 9)
         return ranDom(nineAM);
-    if (hours == 10)
+    if (hour == 10)
         return ranDom(tenAM);
-    if (hours == 11)
+    if (hour == 11)
         return ranDom(elevenAM);
-    if (hours == 12)
+    if (hour == 12)
         return ranDom(twelvePM);
-    if (hours == 13)
+    if (hour == 13)
         return ranDom(onePM);
-    if (hours == 14)
+    if (hour == 14)
         return ranDom(twoPM);
-    if (hours == 15)
+    if (hour == 15)
         return ranDom(threePM);
-    if (hours == 16)
+    if (hour == 16)
         return ranDom(fourPM);
-    if (hours == 17)
+    if (hour == 17)
         return ranDom(fivePM);
-    if (hours == 18)
+    if (hour == 18)
         return ranDom(sixPM);
-    if (hours == 19)
+    if (hour == 19)
         return ranDom(sevenPM);
-    if (hours == 20)
+    if (hour == 20)
         return ranDom(eightPM);
-    if (hours == 21)
+    if (hour == 21)
         return ranDom(ninePM);
-    if (hours == 22)
+    if (hour == 22)
         return ranDom(tenPM);
-    if (hours == 23)
+    if (hour == 23)
         return ranDom(elevenPM);
 }
 
