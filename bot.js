@@ -146,10 +146,12 @@ function acSongs() {
 
 // This is for 1st Time Trigger
 setTimeout(function() {
-	console.log(acSongs());
+	T.post('statuses/update', { status: acSongs() }, function(err, data, response) {
+        console.log(data);
 // This is continuous trigger every full hour
 	setInterval(function(){
-  	console.log(acSongs());
+        T.post('statuses/update', { status: acSongs() }, function(err, data, response) {
+            console.log(data);
   }, 3600000);
   }, firstTrigger);
 
