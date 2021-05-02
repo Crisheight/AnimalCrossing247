@@ -11,8 +11,8 @@ var twelveAM = ["https://www.youtube.com/watch?v=odZ-OV8JWNk", "https://www.yout
     twoAM = ["https://www.youtube.com/watch?v=J36o0MZ7EzU", "https://www.youtube.com/watch?v=YsDM3UvXWOc", "https://www.youtube.com/watch?v=8Q2m0Sl3uyc", "https://www.youtube.com/watch?v=6ctYQ2giDfw",
             "https://www.youtube.com/watch?v=8R-di42uSJk", "https://www.youtube.com/watch?v=clXbS9JOVmY", "https://www.youtube.com/watch?v=4nljMtjB35o", "https://www.youtube.com/watch?v=JhlHbaeQqQs",
             "https://www.youtube.com/watch?v=POsoMkYfh_k"],
-    threeAM = ["https://www.youtube.com/watch?v=Otx87vJ4M1Y", "https://www.youtube.com/watch?v=zXcpYHhiQZk", "https://www.youtube.com/watch?v=3BDqAy2svoY", "https://www.youtube.com/watch?v=gWH27B8TPDA",
-            "https://www.youtube.com/watch?v=pBwH77-DCmk", "https://www.youtube.com/watch?v=APXXkeoUDtQ", "https://www.youtube.com/watch?v=gWH27B8TPDA", "https://www.youtube.com/watch?v=YrELDEVDTFU"],
+    threeAM = ["https://www.youtube.com/watch?v=Otx87vJ4M1Y", "https://www.youtube.com/watch?v=zXcpYHhiQZk", "https://www.youtube.com/watch?v=gWH27B8TPDA",
+            "https://www.youtube.com/watch?v=pBwH77-DCmk", "https://www.youtube.com/watch?v=APXXkeoUDtQ", "https://youtu.be/l8a7xJokAG0", "https://youtu.be/DI-o7wXyrME"],
     fourAM = ["https://www.youtube.com/watch?v=yL2diojhue8", "https://www.youtube.com/watch?v=of877S78m5k", "https://www.youtube.com/watch?v=q4TndIe-648", "https://www.youtube.com/watch?v=OZgsTxyKo7s",
             "https://www.youtube.com/watch?v=hAIjx6jVe8E", "https://www.youtube.com/watch?v=tc453B3c83k", "https://www.youtube.com/watch?v=8XqSkFy8VH8", "https://www.youtube.com/watch?v=9hwV6TFqaFo",
             "https://www.youtube.com/watch?v=sSfz3K6CCbI", "https://www.youtube.com/watch?v=_4O9IflKQCs", "https://www.youtube.com/watch?v=pKMDvMb11bc", "https://www.youtube.com/watch?v=sfV0EYwum3U"],
@@ -74,84 +74,84 @@ var twelveAM = ["https://www.youtube.com/watch?v=odZ-OV8JWNk", "https://www.yout
             "https://www.youtube.com/watch?v=z5Xb6FQMnss", "https://www.youtube.com/watch?v=Wl5Qsoo68Yk", "https://www.youtube.com/watch?v=Autow70fkks", "https://www.youtube.com/watch?v=NRtiXe9ykec",
             "https://www.youtube.com/watch?v=HKLvQOiJN44", "https://www.youtube.com/watch?v=a7YAGDwIceM", "https://www.youtube.com/watch?v=tUgIhLBApu0", "https://www.youtube.com/watch?v=785HVWetf5k",
             "https://www.youtube.com/watch?v=YP84uIo4_8Q"];
-
-
-// function to generate a random result or tweet
+            
 function ranDom (arr) {
     var index = Math.floor(Math.random()*arr.length);
     return arr[index];
 }
-
-var d = new Date();
-var hour = d.getHours();
-var min = d.getMinutes();
-var sec = d.getSeconds();        
-    
-function to_be_executed(){
-    makeInterval();
-    clearInterval();
-    }
-            
-function makeInterval(){
-    if((min == '00') && (sec == '00'))
-        to_be_executed();
-    else
-        setTimeout(to_be_executed,(60*(60-min)+(60-sec))*1000);
-    }
+function checkTime() {
+    var d = new Date();
+    var hour = d.getHours();
+    var min = d.getMinutes();
+    return hour;
+}
+var time = new Date();
+var min = time.getMinutes();
+var firstTrigger = 60000* (60 - min);
 
 function acSongs() {
-    if (hour == 0)
+		hour = checkTime();
+    if (hour == 0) {
         return ranDom(twelveAM);
-    if (hour == 1)
+    } else if (hour == 1) {
         return ranDom(oneAM);
-    if (hour == 2)
+    } else if (hour == 2) {
         return ranDom(twoAM);
-    if (hour == 3)
+    } else if (hour == 3) {
         return ranDom(threeAM);
-    if (hour == 4)
+    } else if (hour == 4) {
         return ranDom(fourAM);
-    if (hour == 5)
+    } else if (hour == 5) {
         return ranDom(fiveAM);
-    if (hour == 6)
+    } else if (hour == 6) {
         return ranDom(sixAM);
-    if (hour == 7)
+    } else if (hour == 7) {
         return ranDom(sevenAM);
-    if (hour == 8)
+    } else if (hour == 8) {
         return ranDom(eightAM);
-    if (hour == 9)
+    } else if (hour == 9) {
         return ranDom(nineAM);
-    if (hour == 10)
+    } else if (hour == 10) {
         return ranDom(tenAM);
-    if (hour == 11)
+    } else if (hour == 11) {
         return ranDom(elevenAM);
-    if (hour == 12)
+    } else if (hour == 12) {
         return ranDom(twelvePM);
-    if (hour == 13)
+    } else if (hour == 13) {
         return ranDom(onePM);
-    if (hour == 14)
+    } else if (hour == 14) {
         return ranDom(twoPM);
-    if (hour == 15)
+    } else if (hour == 15) {
         return ranDom(threePM);
-    if (hour == 16)
+    } else if (hour == 16) {
         return ranDom(fourPM);
-    if (hour == 17)
+    } else if (hour == 17) {
         return ranDom(fivePM);
-    if (hour == 18)
+    } else if (hour == 18) {
         return ranDom(sixPM);
-    if (hour == 19)
+    } else if (hour == 19) {
         return ranDom(sevenPM);
-    if (hour == 20)
+    } else if (hour == 20) {
         return ranDom(eightPM);
-    if (hour == 21)
+    } else if (hour == 21) {
         return ranDom(ninePM);
-    if (hour == 22)
+    } else if (hour == 22) {
         return ranDom(tenPM);
-    if (hour == 23)
+    } else if (hour == 23) {
         return ranDom(elevenPM);
+    } else {
+        return "Wrong time...?";
+    }
 }
 
-setInterval(acSongs, to_be_executed);
-
+// This is for 1st Time Trigger
+setTimeout(function() {
+	console.log(acSongs());
+// This is continuous trigger every full hour
+	setInterval(function(){
+  	console.log(acSongs());
+  }, 3600000);
+  }, firstTrigger);
 
 
 /*
