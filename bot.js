@@ -1,6 +1,6 @@
 require('dotenv').config()
-const config = require('./config')
-const twit = require('twit')
+import config from './config';
+import twit from 'twit';
 const T = new twit(config)
 
 var twelveAM = ["https://www.youtube.com/watch?v=odZ-OV8JWNk", "https://www.youtube.com/watch?v=OW36kFCHdQ4", "https://www.youtube.com/watch?v=yMsEExr7rOg", "https://www.youtube.com/watch?v=hyIPaz3UJAI",
